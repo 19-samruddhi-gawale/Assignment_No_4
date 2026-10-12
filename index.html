@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Employee <span>Registration</span></h1>
+            <p>Please fill in all required information.</p>
+        </header>
+
+        <form id="employeeForm" novalidate>
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name"
+                           placeholder="Enter your full name">
+                    <small id="nameError" class="error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email"
+                           placeholder="example@gmail.com">
+                    <small id="emailError" class="error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password"
+                           placeholder="Minimum 8 characters">
+                    <small id="passwordError" class="error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input type="password" id="confirmPassword"
+                           placeholder="Re-enter password">
+                    <small id="confirmError" class="error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" maxlength="10"
+                           placeholder="10-digit mobile number">
+                    <small id="phoneError" class="error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department *</label>
+                    <select id="department">
+                        <option value="">Select Department</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="HR">Human Resources</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Sales">Sales</option>
+                    </select>
+                    <small id="departmentError" class="error"></small>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="date">Joining Date *</label>
+                    <input type="date" id="date">
+                    <small id="dateError" class="error"></small>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="notes">Additional Notes (Optional)</label>
+                    <textarea id="notes" rows="3"
+                        placeholder="Enter additional information..."></textarea>
+                </div>
+            </div>
+
+            <div id="message" role="status" aria-live="polite"></div>
+
+            <div class="buttons">
+                <button type="submit" class="register-btn">
+                    Register Employee →
+                </button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+
+            <p class="footer">
+                * All fields marked with an asterisk are required.
+            </p>
+        </form>
+    </div>
+
+</body>
+</html>
